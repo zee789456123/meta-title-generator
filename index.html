@@ -1,1 +1,35 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meta Title Generator</title><link rel="stylesheet" href="css/style.css"></head><body><main class="app"><header><p>FREE SEO TOOL</p><h1>Meta Title Generator</h1><span>Generate five complete, keyword-aware titles.</span></header><section class="card"><label>Page content</label><textarea id="content">Affordable SEO services for small businesses that want more organic traffic.</textarea><div class="grid"><div><label>Primary keyword</label><input id="keyword" value="SEO services"></div><div><label>Brand name</label><input id="brand" placeholder="Zea Gatdula"></div></div><label>Search intent</label><select id="intent"><option value="auto">Auto-detect</option><option value="info">Informational</option><option value="commercial">Commercial</option></select><button id="suggest">Suggest keywords</button><span id="status">Browser-only analysis</span><div id="chips"></div></section><section class="card"><label>Competitor titles (optional)</label><div id="competitors"></div></section><section class="card"><button id="generate">Generate Five Titles</button></section><section class="card" id="results" hidden><label>Your title options</label><div id="output"></div></section></main><script src="js/generator.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Generate five keyword-aware meta title ideas in your browser.">
+  <title>Meta Title Generator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header><p>FREE SEO TOOL</p><h1>Meta Title Generator</h1><span>Generate five complete, keyword-aware titles.</span></header>
+    <section class="card" aria-labelledby="content-heading">
+      <h2 id="content-heading">Page details</h2>
+      <label for="content">Page content</label>
+      <textarea id="content" aria-describedby="content-help">Affordable SEO services for small businesses that want more organic traffic.</textarea>
+      <p class="help" id="content-help">Paste a short page summary so suggestions and intent detection have useful context.</p>
+      <div class="grid"><div><label for="keyword">Primary keyword</label><input id="keyword" value="SEO services" autocomplete="off"></div><div><label for="brand">Brand name</label><input id="brand" placeholder="Zea Gatdula" autocomplete="organization"></div></div>
+      <label for="intent">Search intent</label>
+      <select id="intent"><option value="auto">Auto-detect</option><option value="info">Informational</option><option value="commercial">Commercial</option><option value="transactional">Transactional</option></select>
+      <div class="actions"><button id="suggest" type="button">Suggest keywords</button><span id="status" role="status" aria-live="polite">Browser-only analysis</span></div>
+      <div id="chips" aria-label="Keyword suggestions"></div>
+    </section>
+    <section class="card" aria-labelledby="competitor-heading">
+      <h2 id="competitor-heading">Competitor titles <span class="optional">optional</span></h2>
+      <p class="help">Add examples to reveal common wording and vary your title structures.</p>
+      <div id="competitors"></div>
+      <p id="competitor-insight" class="insight" role="status" aria-live="polite" hidden></p>
+    </section>
+    <section class="card generate-card"><button id="generate" type="button">Generate Five Titles</button><p id="error" class="error" role="alert" hidden></p></section>
+    <section class="card" id="results" aria-labelledby="results-heading" hidden><h2 id="results-heading" tabindex="-1">Your title options</h2><div id="output"></div></section>
+  </main>
+  <script src="js/generator.js"></script>
+</body>
+</html>

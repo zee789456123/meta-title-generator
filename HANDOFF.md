@@ -13,22 +13,21 @@ main
 * Embeddable versions organized under `embeds/`
 * Infinite-loop bug in `embeds/meta-title-preview.html` fixed
 * Main generator and preview tested successfully
-
-## Latest completed commit
-
-* Commit: c588e6ea8d1d3e5e23db81bada466d5fafe403ce
-* Message: Add project handoff documentation
+* Root generator design and mobile layout refined
+* Informational, commercial, transactional, and auto-detected intent flows added
+* Competitor title patterns now influence suggestions and display a short analysis
+* Empty-input validation, linked labels, live status messages, focus handling, and visible focus styles added
 
 ## Current task
-No active development task. Ready for design and functionality improvements.
+No active development task. The first design, generation-quality, competitor-analysis, validation, and accessibility pass is complete.
 
 ## Next steps
 
-1. Review the design and mobile layout
-2. Improve title-generation quality
-3. Test different search intents
-4. Improve competitor-title analysis
-5. Add stronger validation and accessibility where needed
+1. Add copy-to-clipboard controls for individual title results
+2. Expand keyword extraction for punctuation, short acronyms, and repeated terms
+3. Consider richer competitor comparisons such as average length and keyword placement
+4. Confirm the final live website URL, then update `sitemap.xml` and `robots.txt`
+5. Complete the project license details
 
 ## Tests completed
 
@@ -38,6 +37,13 @@ No active development task. Ready for design and functionality improvements.
 * Generate Titles works
 * Preview no longer freezes
 * No JavaScript syntax errors found
+* Root generator creates exactly five titles for informational and transactional intent
+* Auto-detect defaults informational content correctly
+* Competitor pattern analysis and numeric-title variation work
+* Empty keyword/content validation displays an error and returns focus to the keyword field
+* Generated titles remain at or below 60 characters in tested cases
+* Mobile layout tested at 375px with a single-column grid and no horizontal overflow
+* Browser console reports no errors
 
 ## Known issues
 
